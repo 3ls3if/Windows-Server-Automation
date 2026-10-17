@@ -1,0 +1,20 @@
+
+---
+# Example variables for the Windows Server lab.
+# Copy this file to windows.yml and customize it.
+# Never commit real passwords or other secrets.
+
+# WinRM connection settings
+ansible_connection: winrm
+ansible_port: 5986
+ansible_winrm_scheme: https
+ansible_winrm_transport: ntlm
+ansible_winrm_server_cert_validation: validate
+
+# Windows Server baseline settings
+windows_timezone: "India Standard Time"
+
+# IIS lab settings
+windows_iis_install: false
+windows_iis_website_name: "LabWebsite"
+windows_iis_website_port: 8080

@@ -1,0 +1,15 @@
+---
+- name: Configure a basic Windows Server baseline
+  hosts: windows
+  gather_facts: false
+
+  tasks:
+    - name: Create the automation working directory
+      ansible.windows.win_file:
+        path: C:\Automation
+        state: directory
+
+    - name: Ensure Windows Time service is running
+      ansible.windows.win_service:
+        name: W32Time
+        state: started
