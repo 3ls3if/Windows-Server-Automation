@@ -1,0 +1,36 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*secret*
+*password*
+vault-password*
+!*.example
+
+# Private keys and certificates
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Ansible
+ansible/**/vault.yml
+ansible/ retry_files_enabled
+.retry
+*.retry
+inventory/**/hosts.ini
+
+# PowerShell
+*.log
+*.tmp
+Transcript*.txt
+
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Editor and temporary files
+.vscode/
+.idea/
+*.swp
